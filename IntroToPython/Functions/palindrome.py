@@ -1,10 +1,27 @@
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
+    """
+    Check if a string is a palindrome.
+
+    A palindrome is a string that reads the same forwards as backwards.
+
+    :param string: The string to check.
+    :return: True if `string` is a palindrome, False otherwise.
+    """
     # Check reverse of word is equal to the word
     backwards = string[::-1]
     return backwards.casefold() == string.casefold()
 
 
-def is_palindrome_sentence(sentence):
+def is_palindrome_sentence(sentence: str) -> bool:
+    """
+    Check if a sentence is a palindrome.
+
+    The function ignores whitespace, capitalisation and
+    punctuation in the sentence.
+
+    :param sentence: The sentence to check.
+    :return: True if `sentence` is a palindrome, False otherwise.
+    """
     sentence_chars = ""
     for char in sentence:
         if char.isalnum():
